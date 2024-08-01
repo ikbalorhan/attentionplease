@@ -64,8 +64,7 @@ with open(f'Datas/{name}', 'r', encoding='utf-8') as file:
                 file2.write(f'{line}')
                 first = False
                 continue
-            # Ekşi Sözlük verisetiyse aktifleştir
-            """
+            # Etiketsiz verisetse aktifleştir
             second_comma_index = find_second_comma(line)
             before_second_comma = line[:second_comma_index + 1]
             after_second_comma = line[second_comma_index + 1:-2]
@@ -74,8 +73,9 @@ with open(f'Datas/{name}', 'r', encoding='utf-8') as file:
             after_second_comma = remove_emojis(after_second_comma)
             after_second_comma = clean_punctuation(after_second_comma)
             file2.write(f'{before_second_comma}{after_second_comma}{line[-3:]}')
-            """
 
+            # Semi-supervise için etiketli verisetini temizle
+            """
             before_comma = line[:line.rfind(',')]
             after_comma = line[line.rfind(','):]
 
@@ -83,6 +83,7 @@ with open(f'Datas/{name}', 'r', encoding='utf-8') as file:
             before_comma = remove_emojis(before_comma)
             before_comma = clean_punctuation(before_comma)
             file2.write(f'{before_comma}{after_comma}')
+            """
 
 # Türkçe stopwords listesini al
 stop_words = set(stopwords.words('turkish'))
