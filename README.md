@@ -11,3 +11,6 @@ sentiment_analysis.ipynb: A Jupyter Notebook that details the sentiment analysis
 ner.ipynb: Jupyter Notebooks (multiple versions) that describe the Named Entity Recognition (NER) pipeline, including model training and evaluation specific to Turkish text.
 
 companies.csv: A CSV file containing a list of company names, used in the NER task to identify and tag company entities in Turkish text.
+
+To install the required library Zemberek: https://drive.google.com/drive/u/0/folders/0B9TrB39LQKZWX1RSang3M1VkYjQ?resourcekey=0-uFoTlb0PoP0otWan6JkCLg
+Select the latest version from this link and download or save the zemberek-full.jar file to your drive (don't forget to rename it back to zemberek-full.jar if you change the name).
