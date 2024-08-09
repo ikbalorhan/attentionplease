@@ -3,8 +3,29 @@ This repository contains the code and notebooks related to the "Attention Please
 
 Project Structure
 
-
 web_service_attention_please.py: This is the main Python script that runs a FastAPI web service for performing sentiment analysis and named entity recognition on Turkish text. It integrates the Zemberek library for morphological analysis and uses Hugging Face Transformers for sentiment and NER tasks.
+
+DATASET DESCRIPTIONS
+
+Balanced_Sample_Sentiment_Dataset was used to train the model initially.
+
+Unlabeled_Sentiment_Dataset was used as the test dataset after training.
+
+high_confidence_predictions.csv: The dataset containing pseudo labels obtained after filtering predictions with an 80% confidence score.
+
+high_confidence_predictions + Balanced_Sample_Sentiment_Dataset = merged_dataset.csv
+
+Filtered_Sentiment_Dataset.csv: The final dataset.
+
+If we do not filter the results based on an 80% confidence score:
+
+predictions.csv: The dataset obtained without filtering.
+
+predictions + Balanced_Sample_Sentiment_Dataset = Sentiment_Dataset, the final dataset.
+
+companies.csv: A CSV file containing a list of company names, used in the NER task to identify and tag company entities in Turkish text.
+
+MODELS
 
 semisupervised_dataset.ipynb: A Jupyter Notebook that involves creating and processing a semi-supervised dataset for Turkish NLP tasks.
 
@@ -12,7 +33,10 @@ sentiment_analysis.ipynb: A Jupyter Notebook that details the sentiment analysis
 
 ner.ipynb: Jupyter Notebooks (multiple versions) that describe the Named Entity Recognition (NER) pipeline, including model training and evaluation specific to Turkish text.
 
-companies.csv: A CSV file containing a list of company names, used in the NER task to identify and tag company entities in Turkish text.
+![image](https://github.com/user-attachments/assets/e402f4f4-2abd-420f-85e0-072c0bae2f32)
+
+
+
 
 To install the required library Zemberek: https://drive.google.com/drive/u/0/folders/0B9TrB39LQKZWX1RSang3M1VkYjQ?resourcekey=0-uFoTlb0PoP0otWan6JkCLg
 Select the latest version from this link and download or save the zemberek-full.jar file to your drive (don't forget to rename it back to zemberek-full.jar if you change the name).
