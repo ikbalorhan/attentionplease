@@ -15,7 +15,7 @@ high_confidence_predictions.csv: The dataset containing pseudo labels obtained a
 
 high_confidence_predictions + Balanced_Sample_Sentiment_Dataset = merged_dataset.csv
 
-Filtered_Sentiment_Dataset.csv: The final dataset.
+Filtered_Sentiment_Dataset.csv: The final dataset. The model was trained with this dataset.
 
 If we do not filter the results based on an 80% confidence score:
 
